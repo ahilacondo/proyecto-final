@@ -131,17 +131,17 @@ public class Cuestionario extends JFrame implements Datos, intrucciones{
             int c2 = color2.getSelectedIndex();
             boolean condicion = (!(nombre1.getText().equals("")) && !(nombre2.getText().equals("")));
             if ((c1 != c2) && condicion) {
-                JOptionPane.showMessageDialog(null, "Datos Enviados");   
+                JOptionPane.showMessageDialog(Cuestionario.this, "Datos Enviados");   
                 setVisible(false);
                 new Game(COLORES[c1], COLORES[c2], nombre1.getText(), nombre2.getText(), modo.getSelectedIndex());
             }
             else 
-                JOptionPane.showMessageDialog(null, "Ingrese y/o seleccione datos correctos");           
+                JOptionPane.showMessageDialog(Cuestionario.this, "Ingrese y/o seleccione datos correctos");           
         }
     }   
     private class MostrarAyuda implements ActionListener {
         public void actionPerformed(ActionEvent e) {            
-            JOptionPane.showMessageDialog(null, ayudas[modo.getSelectedIndex()]);           
+            JOptionPane.showMessageDialog(Cuestionario.this, ayudas[modo.getSelectedIndex()]);           
         }
     }   
 }
