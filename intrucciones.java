@@ -13,6 +13,16 @@ interface intrucciones {
 			--> Pasado la semana, gana el Detective que posea más y mejores pistas.
 			--> Si tiene alguna duda puede encontrar nuestro correo en los créditos.
 			              """;
+	String CREDITOS="""
+			Duelo de Detectives v1.0\n
+			Curso: Fundamentos de Programación 2
+			Desarrolladores:
+			- Andre Hilacondo Begazo (ahilacondo@unsa.edu.pe)
+			- Daniel Marron Carcausto (dmarronc@unsa.edu.pe)
+			Agradecimientos a: Marco Aedo (docente del curso)
+			En caso de algún error contáctese con cualquiera de nosotros
+			Esperamos y lo disfruten.
+			""";
 	Color colorBoton= Color.BLACK;
 	Color fondoBoton= new Color(221, 175, 39);
 	Font fuente= new Font("Exotc350 DmBd BT",1,20);
