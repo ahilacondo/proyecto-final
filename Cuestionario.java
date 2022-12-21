@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 
-public class Cuestionario extends JFrame implements Datos{    
+public class Cuestionario extends JFrame implements Datos, intrucciones{    
     private static final int ANCHO = 600;
     private static final int ALTO = 400;
     private JPanel seccionI, seccionD; 
@@ -33,12 +33,17 @@ public class Cuestionario extends JFrame implements Datos{
     }
     public void createContents() {
         //creando la seccion izquieda del cuestionario
+    	JLabel aux= new JLabel("Ingrese su nombre de usuario");
+    	aux.setFont(fuenteCuestionario);
         seccionI = new JPanel(new GridLayout(9, 1));
         seccionI.add(new JLabel(" "));
-        seccionI.add(new JLabel("Ingrese su nombre de usuario"));
+        seccionI.add(aux);
         seccionI.add(nombre1 = new JTextField(10));
-        seccionI.add(new JLabel("Seleccione su color preferido"));
+        aux= new JLabel("Seleccione un color");
+        aux.setFont(fuenteCuestionario);
+        seccionI.add(aux);
         color1 = new JComboBox(colores);
+        color1.setFont(fuenteCuestionario);
         color1.setSelectedIndex(0);
         color1.addActionListener(new MColor());
         mColor= new JButton("");
@@ -47,13 +52,19 @@ public class Cuestionario extends JFrame implements Datos{
         selecColor.add(color1);
         selecColor.add(mColor);
         seccionI.add(selecColor); 
+        
         //creando la seccion derecha del cuestionario
         seccionD = new JPanel(new GridLayout(9, 1));
         seccionD.add(new JLabel(" "));
-        seccionD.add(new JLabel("Ingrese su nombre de usuario", SwingConstants.CENTER));
+        aux= new JLabel("Ingrese su nombre de usuario");
+        aux.setFont(fuenteCuestionario);
+        seccionD.add(aux);
         seccionD.add(nombre2 = new JTextField(10));
-        seccionD.add(new JLabel("Seleccione su color preferido"));       
+        aux=new JLabel("Seleccione un color");
+        aux.setFont(fuenteCuestionario);
+        seccionD.add(aux);       
         color2= new JComboBox(colores);
+        color2.setFont(fuenteCuestionario);
         color2.addActionListener(new MColor());
         color1.setSelectedIndex(0);
         mColor2 = new JButton("");
@@ -63,12 +74,16 @@ public class Cuestionario extends JFrame implements Datos{
         selecColor2.add(mColor2);
         seccionD.add(selecColor2);
         
-        //sección de modos de juego y el botón de enviar
+        //secciÃ³n de modos de juego y el botÃ³n de enviar
         enviar = new JButton("Enviar");
+        enviar.setFont(fuenteCuestionario);
         JPanel sup = new JPanel(new GridLayout(1,3));
         JPanel inf = new JPanel(new GridLayout(5,3));
-        inf.add(new JLabel("Modo de Juego  ", SwingConstants.RIGHT));
+        aux= new JLabel("Modo de Juego  ", SwingConstants.RIGHT);
+        aux.setFont(fuenteCuestionario);
+        inf.add(aux);
         modo = new JComboBox(modos);
+        modo.setFont(fuenteCuestionario);
         inf.add(modo);
         JPanel ayudaPanel= new JPanel(new GridLayout(1,5));
         JButton ayuda = new JButton("?");
@@ -91,7 +106,9 @@ public class Cuestionario extends JFrame implements Datos{
         sup.add(espacio);
         sup.add(seccionD);
         JPanel titulo = new JPanel();
-        titulo.add(new JLabel("INGRESE DATOS DE LOS JUGADORES"));
+        aux= new JLabel("INGRESE DATOS DE LOS JUGADORES");
+        aux.setFont(fuenteCuestionario);
+        titulo.add(aux);
         add(titulo,BorderLayout.NORTH);
         add(sup,BorderLayout.CENTER);
         add(new JLabel("     "),BorderLayout.WEST);
