@@ -94,15 +94,7 @@ public class Menu extends JFrame implements intrucciones{
     }
     private class Creditos implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            JOptionPane.showMessageDialog(null, ""
-                        + "Duelo de Detectives v1.0\n\n"
-                        + "Curso: Fundamentos de Programación 2\n\n"
-                        + "Desarrolladores:\n"
-                        + " - Andre Hilacondo Begazo (ahilacondo@unsa.edu.pe)\n"
-                        + " - Daniel Marron Carcausto (dmarronc@unsa.edu.pe)\n\n"
-                        + "Agradecimientos a: Marco Aedo (docente del curso)\n\n"
-                        + "En caso de algún error contáctese con cualquiera de nosotros\n"
-                        + "Esperamos y lo disfruten.");
+            JOptionPane.showMessageDialog(Menu.this, CREDITOS);
         }
     }
     private class Regresar implements ActionListener {
